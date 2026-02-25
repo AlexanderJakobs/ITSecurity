@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2FA Bestätigung</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h2>2-Faktor-Authentifizierung</h2>
+
+        <form method="post" action="/login/2fa">
+            <label for="code">Google Authenticator Code</label><br>
+            <input type="text" name="code" maxlength="6" autocomplete="one-time-code"><br><br>
+
+            <input type="submit" value="Bestätigen">
+        </form>
+    </body>
+</html>
