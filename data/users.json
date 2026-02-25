@@ -1,0 +1,42 @@
+{
+    "users": [
+        {
+            "name": "test",
+            "password": "test"
+        },
+        {
+            "name": "test2",
+            "password": "test2"
+        },
+        {
+            "name": "test3",
+            "password": "test3"
+        },
+        {
+            "name": "test4",
+            "password": "$argon2id$v=19$m=102400,t=5,p=2$2Gv1OfTRtnwP0unmqpDCBA$P73WplAfcgVlRea5BNkk1usdL0qSGekZ4Po/iE1XHNs"
+        },
+        {
+            "name": "sokka",
+            "password": "$argon2id$v=19$m=102400,t=5,p=2$YOcImQz+s5gZS1AYl4b9iQ$B+QAb395uwwGUUL3RRTuguo1myi7Zhnth0PcAdQYjBg"
+        },
+        {
+            "name": "juri",
+            "password": "$argon2id$v=19$m=102400,t=5,p=2$aB+3TRWBJHmKecignUyQQA$WQNmvpH+IBEH8OeUsPWYhSDda8hZVtl4s9RA+79qBsc"
+        },
+        {
+            "name": "leer",
+            "password": "$argon2id$v=19$m=102400,t=5,p=2$6KTGi2VqB9AqHX9CPh0HgQ$Cmt3t5Oh/Ig9i+PwpO2QCj3g+ACXCN4anJmNZcx5P6s"
+        },
+        {
+            "name": "sokka3",
+            "password": "$argon2id$v=19$m=102400,t=5,p=2$OiRWSC70s6La/uLZBaZPUw$3M9MrD3UR2lIdxzDllEwTEb/v6gHk423WEryDDB4LTE",
+            "totp_secret": "VWSCMK2J5SEKD7LTBQKGUNDRM6M7QTPW"
+        },
+        {
+            "name": "Juri2",
+            "password": "$argon2id$v=19$m=102400,t=5,p=2$2/mAnMHE2Tdnu1lax8EL8w$k6RDIVv9MaJ9LoTij5g0aDQ/unYHJ7w4JKuCh7Hwm54",
+            "totp_secret": "QILNTDLX7Z2OCIMYEK74D3EB32OKSW2E"
+        }
+    ]
+}
