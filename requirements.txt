@@ -1,0 +1,6 @@
+Flask
+argon2-cffi
+pyotp
+qrcode[pil]>=7.0
+webauthn
+pycryptodome
