@@ -66,7 +66,7 @@ After finishing the course I reviewed my own code the way an attacker would. Thi
 | 8 | TOTP secrets and codes written to logs |Not fixed| 🟡 Medium | `user_store.py` – `_verify_totp`, `app.py` – `submit_2fa` |
 | 9 | Overly wide TOTP window and no rate limiting |Not fixed| 🟡 Medium | `user_store.py` – `valid_window=10` |
 | 10 | No CSRF protection on forms |Not fixed| 🟡 Medium | `templates/*.html` |
-| 11 | Sessions never expire, no nonce replay cache | 🟢 Low |Not fixed| `server.py` – `sessions`, `/login` |
+| 11 | Sessions never expire, no nonce replay cache |Not fixed| 🟢 Low | `server.py` – `sessions`, `/login` |
 | 12 | User enumeration |Not fixed| 🟢 Low | `server.py` – `/login` (404 vs. 401) |
 
 ### Attack chain: account takeover without the password
