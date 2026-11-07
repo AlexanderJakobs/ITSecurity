@@ -54,11 +54,11 @@ After finishing the course I reviewed my own code the way an attacker would. Thi
 
 ### Summary
 
-| # | Finding | Severity | Location |
+| # | Finding | Fixed? | Severity | Location |
 |---|---------|----------|----------|
-| 1 | Hardcoded Flask `secret_key` allows forged sessions | 🔴 Critical | `app.py:16` |
+| 1 | Hardcoded Flask `secret_key` allows forged sessions | ✅ Fixed| 🔴 Critical | `app.py:16` |
 | 2 | Unauthenticated admin endpoints leak TOTP secrets (2FA bypass) | 🔴 Critical | `app.py` – `/admin/add_user`, `/admin/qr/<username>` |
-| 3 | Debug mode enabled on all interfaces (remote code execution) | 🔴 Critical | `app.py:115`, `server.py:364` |
+| 3 | Debug mode enabled on all interfaces (remote code execution) |✅ Fixed| 🔴 Critical | `app.py:115`, `server.py:364` |
 | 4 | Secrets and test credentials committed to the repository | 🟠 High | `data/users.json`, `client/shared_key.txt` |
 | 5 | AES-CBC without integrity protection + detailed error messages (padding oracle) | 🟠 High | `server.py` – `encrypt_aes` / `decrypt_aes`, `/login`, `/chat` |
 | 6 | Shared key is derived from the stored password hash | 🟠 High | `server.py` – `get_shared_key_for_user` |
