@@ -55,7 +55,7 @@ After finishing the course I reviewed my own code the way an attacker would. Thi
 ### Summary
 
 | # | Finding | Fixed? | Severity | Location |
-|---|---------|----------|----------|
+|---|---------|--------|----------|----------|
 | 1 | Hardcoded Flask `secret_key` allows forged sessions | ✅ Fixed| 🔴 Critical | `app.py:16` |
 | 2 | Unauthenticated admin endpoints leak TOTP secrets (2FA bypass) | 🔴 Critical | `app.py` – `/admin/add_user`, `/admin/qr/<username>` |
 | 3 | Debug mode enabled on all interfaces (remote code execution) |✅ Fixed| 🔴 Critical | `app.py:115`, `server.py:364` |
