@@ -57,17 +57,17 @@ After finishing the course I reviewed my own code the way an attacker would. Thi
 | # | Finding | Fixed? | Severity | Location |
 |---|---------|--------|----------|----------|
 | 1 | Hardcoded Flask `secret_key` allows forged sessions | ✅ Fixed| 🔴 Critical | `app.py:16` |
-| 2 | Unauthenticated admin endpoints leak TOTP secrets (2FA bypass) | 🔴 Critical | `app.py` – `/admin/add_user`, `/admin/qr/<username>` |
+| 2 | Unauthenticated admin endpoints leak TOTP secrets (2FA bypass) | Not fixed| 🔴 Critical | `app.py` – `/admin/add_user`, `/admin/qr/<username>` |
 | 3 | Debug mode enabled on all interfaces (remote code execution) |✅ Fixed| 🔴 Critical | `app.py:115`, `server.py:364` |
-| 4 | Secrets and test credentials committed to the repository | 🟠 High | `data/users.json`, `client/shared_key.txt` |
-| 5 | AES-CBC without integrity protection + detailed error messages (padding oracle) | 🟠 High | `server.py` – `encrypt_aes` / `decrypt_aes`, `/login`, `/chat` |
-| 6 | Shared key is derived from the stored password hash | 🟠 High | `server.py` – `get_shared_key_for_user` |
-| 7 | Reflected XSS in user registration response | 🟠 High | `app.py` – `add_user_submit` |
-| 8 | TOTP secrets and codes written to logs | 🟡 Medium | `user_store.py` – `_verify_totp`, `app.py` – `submit_2fa` |
-| 9 | Overly wide TOTP window and no rate limiting | 🟡 Medium | `user_store.py` – `valid_window=10` |
-| 10 | No CSRF protection on forms | 🟡 Medium | `templates/*.html` |
-| 11 | Sessions never expire, no nonce replay cache | 🟢 Low | `server.py` – `sessions`, `/login` |
-| 12 | User enumeration | 🟢 Low | `server.py` – `/login` (404 vs. 401) |
+| 4 | Secrets and test credentials committed to the repository |Not fixed| 🟠 High | `data/users.json`, `client/shared_key.txt` |
+| 5 | AES-CBC without integrity protection + detailed error messages (padding oracle) |Not fixed| 🟠 High | `server.py` – `encrypt_aes` / `decrypt_aes`, `/login`, `/chat` |
+| 6 | Shared key is derived from the stored password hash |Not fixed| 🟠 High | `server.py` – `get_shared_key_for_user` |
+| 7 | Reflected XSS in user registration response |Not fixed| 🟠 High | `app.py` – `add_user_submit` |
+| 8 | TOTP secrets and codes written to logs |Not fixed| 🟡 Medium | `user_store.py` – `_verify_totp`, `app.py` – `submit_2fa` |
+| 9 | Overly wide TOTP window and no rate limiting |Not fixed| 🟡 Medium | `user_store.py` – `valid_window=10` |
+| 10 | No CSRF protection on forms |Not fixed| 🟡 Medium | `templates/*.html` |
+| 11 | Sessions never expire, no nonce replay cache | 🟢 Low |Not fixed| `server.py` – `sessions`, `/login` |
+| 12 | User enumeration |Not fixed| 🟢 Low | `server.py` – `/login` (404 vs. 401) |
 
 ### Attack chain: account takeover without the password
 
