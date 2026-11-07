@@ -3,6 +3,7 @@ import user_store
 import logging
 import qrcode
 import io
+import os
 
 # Route             | Methode | Zweck                                |
 # ----------------- | ------- | ------------------------------------ |
@@ -13,7 +14,7 @@ import io
 # `/admin/qr/<user>`| GET     | QR-Code für TOTP lokal generieren    |
 
 app = Flask(__name__)
-app.secret_key = "AppSecretKey"
+app.secret_key = "***"
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -112,4 +113,5 @@ def get_qr_code(username):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True)
+    debug = os.environ.get("FLASK_DEBUG") == "1"
+    app.run(host="127.0.0.1" if debug else "0.0.0.0", debug=debug)
